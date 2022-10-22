@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+  body {
+  background-color: lightgreen;
+}
+</style>
+  </head>
+<body ng-app="">
+<h3> Welcome to the last math quiz for basic facts. </h3>
+<p>---------------------------------------------------------------</p>
+<p> To go back to any of the previous quizzes, click on one of the links below: </p>
+<br>
+<a href="index.html"> Addition </a>
+<br><br>
+<a href="subtract.html"> Subtraction </a>
+<br> <br>
+<a href="mult.html"> Multiplication </a>
+<br> <br>
+<p> Division quiz: </p>
+<form>
+  Question 1: 18/2:
+  <input type="radio" ng-model="myVar1" value="nine">9
+  <input type="radio" ng-model="myVar1" value="six">6
+  <br>
+  <br>
+   Question 2:  16/2:
+  <input type="radio" ng-model="myVar2" value="six">6
+  <input type="radio" ng-model="myVar2" value="eight">8
+  <br>
+  <br>
+    Question 3: 18/2:
+  <input type="radio" ng-model="myVar3" value="eighteen">18
+  <input type="radio" ng-model="myVar3" value="nine">9
+  <br>
+  <br>
+   Question 4: 7/7 :
+  <input type="radio" ng-model="myVar4" value="one">1
+  <input type="radio" ng-model="myVar4" value="fortynine">49
+  <br>
+  <br>
+    Question 5: 80/2:
+  <input type="radio" ng-model="myVar5" value="thirty">30
+  <input type="radio" ng-model="myVar5" value="forty">40
+  <br>
+  <br>
+   Question 6: 72/2 :
+  <input type="radio" ng-model="myVar6" value="thirtyfour">34
+  <input type="radio" ng-model="myVar6" value="thirtysix">36
+  <br>
+  <br>
+    Question 7: 100/2:
+  <input type="radio" ng-model="myVar7" value="fifty">50
+  <input type="radio" ng-model="myVar7" value="eighty">80
+  <br>
+  <br>
+   Question 8: 11/2:
+  <input type="radio" ng-model="myVar8" value="fiver1">5 remainder 1 
+  <input type="radio" ng-model="myVar8" value="fiverthree">5 remainder three
+  <br>
+  <br>
+    Question 9: 240/2:
+  <input type="radio" ng-model="myVar9" value="forty">40
+  <input type="radio" ng-model="myVar9" value="onehundredtwenty">120
+  <br>
+  <br>
+   Question 10: 390/10 :
+  <input type="radio" ng-model="myVar10" value="threepnine">3.9
+  <input type="radio" ng-model="myVar10" value="thirtynine">39
+  <br>
+  <br>
+  <p> Results: </p>
+</form>
+
+<div ng-switch="myVar1">
+  <div ng-switch-when="nine">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="six">
+  <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  
+  <div ng-switch="myVar2">
+  <div ng-switch-when="eight">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="six">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <div ng-switch="myVar3">
+  <div ng-switch-when="nine">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="eighteen">
+      <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <div ng-switch="myVar4">
+  <div ng-switch-when="one">
+   <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="fortynine">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <div ng-switch="myVar5">
+  <div ng-switch-when="forty">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="thirty">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <div ng-switch="myVar6">
+  <div ng-switch-when="thirtysix">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="thirtyfour">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <div ng-switch="myVar7">
+  <div ng-switch-when="fifty">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="twohundred">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <div ng-switch="myVar8">
+  <div ng-switch-when="fiver1">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="fiverthree">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+    <div ng-switch="myVar9">
+  <div ng-switch-when="onehundredtwenty">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="forty">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <div ng-switch="myVar10">
+  <div ng-switch-when="thirtynine">
+       <div class="alert alert-success">
+    <strong>Correct!</strong> 
+  </div>
+  </div>
+  <div ng-switch-when="threepnine">
+       <div class="alert alert-danger">
+  <strong>Try again!</strong>
+</div>
+  </div>
+  </div>
+  <p>We are all done with our math quizzes. You can go back and redo this quiz, or any of the previous quizzes if you want.</p>
+  <h4> Stay tuned for future quizzes </h4>
+</body>
+</html>
